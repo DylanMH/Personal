@@ -1,0 +1,380 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--sectionMain: #11334b;
+	--sectionSecondary: #1f4c65;
+	--primaryFontColor: #fff;
+	--secondaryFontColor: #6dbeeb;
+	--primaryFontStyle: "Montserrat", sans-serif;
+	--secondaryFontStyle: "Roboto", sans-serif;
+	--black: #000;
+}
+
+/* ############################################### */
+/* ################# CUSTOM CSS ################## */
+/* ############################################### */
+
+/* ABOUT SECTION */
+.about-section {
+	background-image: linear-gradient(
+		to bottom,
+		var(--sectionMain),
+		var(--sectionSecondary)
+	);
+	width: 100%;
+	height: 100vh;
+	padding: 2rem;
+	align-items: center;
+	display: flex;
+}
+
+#about h1 {
+	font-weight: 800;
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	letter-spacing: -0.04rem;
+}
+
+#about h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--secondaryFontColor);
+	font-family: var(--primaryFontStyle);
+	letter-spacing: -0.04rem;
+}
+
+#about p {
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1rem * 1.2;
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+}
+
+#social-links a {
+	color: var(--secondaryFontColor);
+}
+
+#social-links a:hover {
+	color: var(--primaryFontColor);
+}
+
+/* JOURNEY SECTION */
+.journey-section {
+	background-image: linear-gradient(
+		to bottom,
+		var(--sectionSecondary),
+		var(--sectionMain)
+	);
+	width: 100%;
+	height: 100vh;
+}
+
+/* Mobile screen takes up full height to display cards */
+@media screen and (max-width: 768px) {
+	.journey-section {
+		height: 100%;
+	}
+}
+
+#journey h1 {
+	font-weight: 800;
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+	text-align: center;
+	letter-spacing: -0.04rem;
+}
+
+#journey h1 span {
+	color: var(--secondaryFontColor);
+}
+
+#journey h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+}
+
+/* SKILLS SECTION */
+.skills-section {
+	background-image: linear-gradient(
+		to bottom,
+		var(--sectionMain),
+		var(--sectionSecondary)
+	);
+	height: 100vh;
+	padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.skills-section {
+		height: 100%;
+	}
+}
+
+#skills h1 {
+	font-weight: 800;
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	letter-spacing: -0.04rem;
+	text-align: center;
+}
+
+#skills h1 span {
+	color: var(--secondaryFontColor);
+}
+
+#skills h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+	text-align: center;
+}
+
+.contact-section {
+	background-image: linear-gradient(
+		to bottom,
+		var(--sectionSecondary),
+		var(--sectionMain)
+	);
+	width: 100%;
+	height: 100vh;
+	padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.contact-section {
+		height: 100%;
+	}
+}
+
+#contact h1 {
+	font-weight: 800;
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	letter-spacing: -0.04rem;
+	text-align: center;
+}
+
+#contact h1 span {
+	color: var(--secondaryFontColor);
+}
+
+#contact input {
+	width: 100%;
+	height: 2rem;
+	border-radius: 0.5rem;
+	border: 0.1rem solid var(--secondaryFontColor);
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	font-family: var(--primaryFontStyle);
+	font-weight: 500;
+	color: var(--primaryFontColor);
+	background-color: transparent;
+}
+
+#contact textarea {
+	width: 100%;
+	height: 10rem;
+	border-radius: 0.5rem;
+	border: 0.1rem solid var(--secondaryFontColor);
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	font-family: var(--primaryFontStyle);
+	font-weight: 500;
+	color: var(--primaryFontColor);
+	background-color: transparent;
+}
+
+#contact input::placeholder {
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+	font-weight: 500;
+}
+
+#contact textarea::placeholder {
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+	font-weight: 500;
+}
+
+.profile-img {
+	width: 15rem;
+	height: 15rem;
+	object-fit: fill;
+	border-radius: 20rem;
+	border: 0.2rem solid var(--secondaryFontColor);
+	padding: 0.4rem;
+}
+
+#scrollToTopBtn {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	background-color: var(--secondaryFontColor);
+	color: var(--primaryFontColor);
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 50%;
+	width: 50px;
+}
+
+#scrollToTopBtn:hover {
+	background-color: var(--primaryFontColor);
+	color: var(--secondaryFontColor);
+}
+
+@media screen and (max-width: 768px) {
+	#header-nav {
+		display: none;
+	}
+}
+
+#header-nav {
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+#header-nav a {
+	padding: 0.5rem;
+}
+
+#header-nav a:hover {
+	color: var(--secondaryFontColor);
+}
+
+#header-nav .active {
+	color: var(--secondaryFontColor);
+}
+
+/* ############################################### */
+/* ############## EDITED BOOTSTRAP ############### */
+/* ############################################### */
+
+.btn-primary {
+	background-color: var(--secondaryFontColor);
+	border-color: var(--secondaryFontColor);
+	color: var(--black);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+.btn-primary:hover {
+	background-color: var(--sectionSecondary);
+	border-color: var(--sectionSecondary);
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+.btn-outline-primary {
+	color: var(--secondaryFontColor);
+	border-color: var(--secondaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+	background-color: var(--secondaryFontColor);
+	border-color: var(--sectionSecondary);
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+.card {
+	background-color: transparent;
+	border-radius: 0.5rem;
+	border: 4px solid var(--secondaryFontColor);
+	padding: 1rem;
+	width: 95%;
+	position: relative;
+}
+
+/* Screens that arent mobile, display line and circle to the left of cards */
+@media screen and (min-width: 768px) {
+	#education .card::before,
+	#experience .card::before {
+		content: ""; /* Required for pseudo-elements */
+		position: absolute;
+		left: -20px; /* position of line */
+		top: 0;
+		bottom: 0;
+		width: 2px; /* Width of the line */
+		background-color: var(--secondaryFontColor); /* Color of the line */
+	}
+
+	#education .card::after,
+	#experience .card::after {
+		content: "";
+		position: absolute;
+		left: -25px; /* Adjust to align with the line */
+		top: 0;
+		width: 12px; /* Diameter of the circle */
+		height: 12px; /* Diameter of the circle */
+		border-radius: 50%;
+		background-color: var(--secondaryFontColor); /* Color of the circle */
+	}
+
+	#experience .card::before {
+		left: 626px;
+	}
+
+	#experience .card::after {
+		left: 621px;
+	}
+}
+
+.card-subtitle {
+	color: var(--secondaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+.card-title {
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 600;
+}
+
+.card-title span {
+	color: var(--primaryFontColor);
+	font-family: var(--secondaryFontStyle);
+	font-weight: 100;
+}
+
+.card-text {
+	color: var(--primaryFontColor);
+	font-family: var(--primaryFontStyle);
+	font-weight: 500;
+}
+
+/* Screens that arent mobile, display text to the right of cards */
+@media screen and (min-width: 768px) {
+	#experience,
+	.card .card-title .card-text {
+		text-align: end;
+	}
+}
+
+.progress {
+	height: 1rem;
+	background-color: transparent;
+	border: 0.01rem solid var(--secondaryFontColor);
+}
+
+.progress-bar {
+	background-color: var(--secondaryFontColor);
+	color: white;
+}

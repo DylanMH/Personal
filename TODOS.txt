@@ -1,0 +1,2 @@
+- Create a border image for profile picture
+- Edit social icons to match wireframe design
