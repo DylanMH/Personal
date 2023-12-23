@@ -4,13 +4,14 @@
 	box-sizing: border-box;
 }
 
+/* CUSTOM COLORS (CUSTOMIZE TO YOUR LIKING) */
 :root {
-	--sectionMain: #11334b;
-	--sectionSecondary: #1f4c65;
-	--primaryFontColor: #fff;
-	--secondaryFontColor: #6dbeeb;
-	--primaryFontStyle: "Montserrat", sans-serif;
-	--secondaryFontStyle: "Roboto", sans-serif;
+	--sectionMain: #11334b; /* main section background color (used in about me section for reference) */
+	--sectionSecondary: #1f4c65; /* secondary section background color (used in journey section for reference) */
+	--primaryFontColor: #fff; /* primary font color (white) */
+	--secondaryFontColor: #6dbeeb; /* secondary font color (blue) */
+	--primaryFontStyle: "Montserrat", sans-serif; /* primary font style (used in heading) */
+	--secondaryFontStyle: "Roboto", sans-serif; /* secondary font style (used in paragraph) */
 	--black: #000;
 }
 
@@ -74,13 +75,6 @@
 	height: 100vh;
 }
 
-/* Mobile screen takes up full height to display cards */
-@media screen and (max-width: 768px) {
-	.journey-section {
-		height: 100%;
-	}
-}
-
 #journey h1 {
 	font-weight: 800;
 	color: var(--primaryFontColor);
@@ -111,12 +105,6 @@
 	padding: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-	.skills-section {
-		height: 100%;
-	}
-}
-
 #skills h1 {
 	font-weight: 800;
 	color: var(--primaryFontColor);
@@ -137,6 +125,7 @@
 	text-align: center;
 }
 
+/* CONTACT FORM SECTION */
 .contact-section {
 	background-image: linear-gradient(
 		to bottom,
@@ -146,12 +135,6 @@
 	width: 100%;
 	height: 100vh;
 	padding: 2rem;
-}
-
-@media screen and (max-width: 768px) {
-	.contact-section {
-		height: 100%;
-	}
 }
 
 #contact h1 {
@@ -204,6 +187,16 @@
 	font-weight: 500;
 }
 
+/* Mobile screen takes up full height to display full content */
+@media screen and (max-width: 768px) {
+	.journey-section,
+	.skills-section,
+	.contact-section {
+		height: 100%;
+	}
+}
+
+/*User profile image settings */
 .profile-img {
 	width: 15rem;
 	height: 15rem;
@@ -213,6 +206,7 @@
 	padding: 0.4rem;
 }
 
+/*Bottom right button that controls the navigation to top of page*/
 #scrollToTopBtn {
 	position: fixed;
 	bottom: 20px;
@@ -234,12 +228,14 @@
 	color: var(--secondaryFontColor);
 }
 
+/*Remove nav bar on mobile */
 @media screen and (max-width: 768px) {
 	#header-nav {
 		display: none;
 	}
 }
 
+/*Nav bar settings */
 #header-nav {
 	color: var(--primaryFontColor);
 	font-family: var(--secondaryFontStyle);
@@ -256,6 +252,61 @@
 
 #header-nav .active {
 	color: var(--secondaryFontColor);
+}
+
+/* custom list graphic */
+/* Screens that arent mobile, display line and circle to the left of cards */
+@media screen and (min-width: 768px) {
+	#education .card::before,
+	#experience .card::before {
+		content: ""; /* Required for pseudo-elements */
+		position: absolute;
+		left: -20px; /* position of line */
+		top: 0;
+		bottom: 0;
+		width: 2px; /* Width of the line */
+		background-color: var(--secondaryFontColor); /* Color of the line */
+	}
+
+	#education .card::after,
+	#experience .card::after {
+		content: "";
+		position: absolute;
+		left: -25px; /* Adjust to align with the line */
+		top: 0;
+		width: 12px; /* Diameter of the circle */
+		height: 12px; /* Diameter of the circle */
+		border-radius: 50%;
+		background-color: var(--secondaryFontColor); /* Color of the circle */
+	}
+
+	#experience .card::before {
+		left: 606px;
+	}
+
+	#experience .card::after {
+		left: 601px;
+	}
+}
+
+/* Desktop screens display experience words to the right of the card, mobile switches to left of card */
+@media screen and (min-width: 768px) {
+	#experience,
+	.card .card-title .card-text {
+		text-align: end;
+	}
+}
+
+/* Swap direction of icon and text on mobile */
+@media screen and (max-width: 768px) {
+	#experience .card-subtitle {
+		flex-direction: row-reverse;
+	}
+
+	#experience .card-subtitle i {
+		padding-left: 0px;
+		padding-right: 4px;
+	}
 }
 
 /* ############################################### */
@@ -302,40 +353,6 @@
 	position: relative;
 }
 
-/* Screens that arent mobile, display line and circle to the left of cards */
-@media screen and (min-width: 768px) {
-	#education .card::before,
-	#experience .card::before {
-		content: ""; /* Required for pseudo-elements */
-		position: absolute;
-		left: -20px; /* position of line */
-		top: 0;
-		bottom: 0;
-		width: 2px; /* Width of the line */
-		background-color: var(--secondaryFontColor); /* Color of the line */
-	}
-
-	#education .card::after,
-	#experience .card::after {
-		content: "";
-		position: absolute;
-		left: -25px; /* Adjust to align with the line */
-		top: 0;
-		width: 12px; /* Diameter of the circle */
-		height: 12px; /* Diameter of the circle */
-		border-radius: 50%;
-		background-color: var(--secondaryFontColor); /* Color of the circle */
-	}
-
-	#experience .card::before {
-		left: 606px;
-	}
-
-	#experience .card::after {
-		left: 601px;
-	}
-}
-
 .card-subtitle {
 	color: var(--secondaryFontColor);
 	font-family: var(--secondaryFontStyle);
@@ -358,25 +375,6 @@
 	color: var(--primaryFontColor);
 	font-family: var(--primaryFontStyle);
 	font-weight: 500;
-}
-
-/* Screens that arent mobile, display text to the right of cards */
-@media screen and (min-width: 768px) {
-	#experience,
-	.card .card-title .card-text {
-		text-align: end;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	#experience .card-subtitle {
-		flex-direction: row-reverse;
-	}
-
-	#experience .card-subtitle i {
-		padding-left: 0px;
-		padding-right: 4px;
-	}
 }
 
 .progress {

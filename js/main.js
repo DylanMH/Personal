@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Select all card-title elements
+	// Change the progress bar width and aria-valuenow attribute when the page loads to custom values
 	document.querySelectorAll(".card-title").forEach(function (cardTitle) {
 		// The second h5 element contains the percentage
 		let percentageElement = cardTitle.querySelectorAll("h5")[1];
