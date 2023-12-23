@@ -328,11 +328,11 @@
 	}
 
 	#experience .card::before {
-		left: 626px;
+		left: 606px;
 	}
 
 	#experience .card::after {
-		left: 621px;
+		left: 601px;
 	}
 }
 
@@ -365,6 +365,17 @@
 	#experience,
 	.card .card-title .card-text {
 		text-align: end;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#experience .card-subtitle {
+		flex-direction: row-reverse;
+	}
+
+	#experience .card-subtitle i {
+		padding-left: 0px;
+		padding-right: 4px;
 	}
 }
 
