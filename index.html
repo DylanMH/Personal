@@ -30,7 +30,7 @@
         </div>
       </nav>
       <!-- Row for Profile and Description -->
-      <div class="row ps-3">
+      <div class="row">
         <div class="col-md-4">
           <img src="images/PROFILEPLACEHOLDER.jpg" alt="hero-img"
             class="d-flex mx-auto justify-content-center profile-img">
@@ -53,8 +53,8 @@
           <a href="#"><i class="fab fa-linkedin-in px-2"></i></a> <!--LINK TO LINKEDIN PROFILE-->
         </div>
         <div class="col-md-8 d-flex justify-content-md-end ps-0">
-          <a href="#" class="btn btn-outline-primary btn-lg px-4 m-4">Résumé</a> <!--LINK TO RESUME FILE-->
-          <a href="#contact" class="btn btn-primary btn-lg px-4 m-4">Contact Me</a>
+          <a id="resume-btn" href="#" class="btn btn-outline-primary btn-lg px-4 m-4">Résumé</a> <!--LINK TO RESUME FILE-->
+          <a id="contact-btn" href="#contact" class="btn btn-primary btn-lg px-4 m-4">Contact Me</a>
           <!--LINK TO CONTACT FORM (DEFAULT) OR OTHER FORM OF CONTACT-->
         </div>
       </div>
@@ -139,7 +139,7 @@
               <div class="card-title d-flex justify-content-between">
                 <h5>HTML<i class="fab fa-html5" style="padding-left: 10px"></i></h5>
                 <!-- CHANGE THIS VALUE TO REPRESENT YOUR SKILL LEVEL -->
-                <h5>80%</h5>
+                <h5>60%</h5>
               </div>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 76%;" aria-valuenow="76" aria-valuemin="0"
@@ -150,7 +150,7 @@
               <div class="card-title d-flex justify-content-between">
                 <h5>CSS<i class="fab fa-css3-alt" style="padding-left: 10px"></i></h5>
                 <!-- CHANGE THIS VALUE TO REPRESENT YOUR SKILL LEVEL -->
-                <h5>67%</h5>
+                <h5>100%</h5>
               </div>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 76%;" aria-valuenow="76" aria-valuemin="0"
@@ -224,13 +224,13 @@
       <!--ADD THIRD PARTY HANDLER OR CREATE OWN PHP FILE TO HANDLE EMAILS-->
       <form action="" class="w-75 mx-auto">
         <div class="row">
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-sm-3">
             <div class="mb-3">
               <label for="fullname" class="form-label"></label>
               <input type="text" class="form-control" id="fullname" placeholder="Full Name">
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-sm-3">
             <div class="mb-3">
               <label for="email" class="form-label"></label>
               <input type="email" class="form-control" id="email" placeholder="Email Address">
@@ -238,13 +238,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-sm-3">
             <div class="mb-3">
               <label for="mobile" class="form-label"></label>
               <input type="text" class="form-control" id="mobile" placeholder="Mobile Number">
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-sm-3">
             <div class="mb-3">
               <label for="subject" class="form-label"></label>
               <input type="text" class="form-control" id="subject" placeholder="Email Subject">

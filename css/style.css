@@ -64,6 +64,15 @@
 	color: var(--primaryFontColor);
 }
 
+@media screen and (max-width: 768px) {
+	#resume-btn,
+	#contact-btn {
+		margin: 0 auto !important;
+		margin-top: 1rem !important;
+		margin-left: 1.5rem !important;
+	}
+}
+
 /* JOURNEY SECTION */
 .journey-section {
 	background-image: linear-gradient(

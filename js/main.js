@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// display the scroll to top button when the user scrolls down 20px from the top of the document
 window.onscroll = function () {
 	scrollFunction();
 };
@@ -65,3 +66,28 @@ function scrollFunction() {
 			document.documentElement.scrollTop = 0;
 		});
 }
+
+// swap the card-titles for experience section when screen size is less than 768px to match the order of the cards on mobile
+function updateCardTitles() {
+	const experienceSection = document.getElementById("experience");
+	if (!experienceSection) return; // Exit if the experience section is not found
+
+	const cardTitles = experienceSection.querySelectorAll(".card-title");
+	cardTitles.forEach(function (cardTitle) {
+		const parts = cardTitle.innerHTML.split(" - ");
+		if (window.innerWidth < 768) {
+			// Ensure there are two parts before swapping
+			if (parts.length === 2) {
+				cardTitle.innerHTML = `${parts[1]} - ${parts[0]}`;
+			}
+		} else {
+			// Restore original order (assuming the second part exists)
+			cardTitle.innerHTML = `${
+				parts[1] ? parts[0] + " - " + parts[1] : parts[0]
+			}`;
+		}
+	});
+}
+
+window.onresize = updateCardTitles;
+window.onload = updateCardTitles; // Ensure correct text on page load
